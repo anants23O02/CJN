@@ -1,0 +1,9 @@
+.mergeButton{
+    margin-bottom: 10px !important;
+    padding: 20px 15px !important;
+    align-items: right;
+}
+.alignRight{
+    display: flex;
+    justify-content: flex-end;
+}
