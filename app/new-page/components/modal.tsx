@@ -31,7 +31,6 @@ const FilterPopup: React.FC = () => {
 
   const handleOk = () => {
     setIsModalVisible(false);
-    // Update your table or data parsing logic here based on selectedFilters
     console.log('Selected Filters:', selectedFilters);
   };
 
@@ -74,8 +73,6 @@ const FilterPopup: React.FC = () => {
           </span>
         ))}
       
-
-      {/* Modal for managing filters */}
       <Modal
         title="Manage Filters"
         visible={isModalVisible}

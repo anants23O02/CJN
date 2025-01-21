@@ -23,7 +23,6 @@ const NewPage: React.FC = () => {
   return (
     <div>
       <h3>
-        {/* this is to be taken from breadcrumbs */}
         Master Name Index
       </h3>
       <FilterPopup />

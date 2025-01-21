@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { Row, Col, Checkbox, Typography } from 'antd';
+import React from "react";
+import { Row, Col, Checkbox, Typography, Space } from "antd";
 
 const { Text } = Typography;
 
@@ -39,111 +39,140 @@ const CaseRow: React.FC<RowData> = ({
   address,
 }) => {
   return (
-    <Row
-      gutter={[16, 16]}
-      align="middle"
+    <>
+      <div
       style={{
-        padding: '16px',
-        border: '1px solid #e8e8e8',
-        borderRadius: '8px',
-        backgroundColor: '#ffffff',
-        marginBottom: '16px',
+        overflowX: 'auto', // Enable horizontal scrolling
+        padding: '8px',
       }}
     >
-      {/* Checkbox */}
-      <Col xs={24} sm={1}>
-        <Checkbox />
-      </Col>
+      <Row justify="start" align="middle" style={{ marginBottom: "8px" }}>
+        <Space size="large">
+          <Checkbox></Checkbox>
+          <Col>
+            <Text>Case:</Text>
+            <Text>{" " + caseNumber}</Text>
+          </Col>
+          <Col>
+            <Text>Date:</Text>
+            <Text>{" " + date} </Text>
+          </Col>
+        </Space>
+      </Row>
+      <Row justify="start" align="middle" style={{ marginBottom: "16px",whiteSpace: 'nowrap', // Prevent wrapping
+          width: 'max-content', }}>
+        <Space size="large">
+           <Col>
+           <Text>First Name</Text><br />
+            <Text>{firstName}</Text>
+          </Col>
+          <Col>
+            <Text>Middle Name</Text><br />
+            <Text>{middleName}</Text>
+          </Col><Col>
+            <Text>Last Name</Text><br />
+            <Text>{lastName}</Text>
+          </Col>
+          <Col>
+           <Text>suffix</Text><br />
+            <Text>{suffix}</Text>
+          </Col>
+          <Col>
+            <Text>DOB</Text><br />
+            <Text>{dob}</Text>
+          </Col><Col>
+            <Text>Last Name</Text><br />
+            <Text>{lastName}</Text>
+          </Col>
+          <Col>
+           <Text>Sex</Text><br />
+            <Text>{sex}</Text>
+          </Col>
+          <Col>
+            <Text>Race</Text><br />
+            <Text>{race}</Text>
+          </Col><Col>
+            <Text>Height</Text><br />
+            <Text>{height}</Text>
+          </Col>
+          <Col>
+           <Text>ID</Text><br />
+            <Text>{id}</Text>
+          </Col>
+          <Col>
+            <Text>Phone No.</Text><br />
+            <Text>{phoneNumber}</Text>
+          </Col><Col>
+            <Text>Address</Text><br />
+            <Text>{address}</Text>
+          </Col>
+        </Space>
+      </Row>
 
-      {/* Case Number and Date */}
-      <Col xs={24} sm={3}>
-        <Text strong>
-          Case: <a href="#">{caseNumber}</a>
-        </Text>
-        <br />
-        <Text>Date: {date}</Text>
-      </Col>
-
-      {/* Name Information */}
-      <Col xs={24} sm={3}>
-        <Text strong>First Name:</Text> <br />
-        <Text>{firstName}</Text>
-      </Col>
-      <Col xs={24} sm={3}>
-        <Text strong>Middle Name:</Text> <br />
-        <Text>{middleName}</Text>
-      </Col>
-      <Col xs={24} sm={3}>
-        <Text strong>Last Name:</Text> <br />
-        <Text>{lastName}</Text>
-      </Col>
-      <Col xs={24} sm={2}>
-        <Text strong>Suffix:</Text> <br />
-        <Text>{suffix || '---'}</Text>
-      </Col>
-
-      {/* Highlighted DOB */}
-      <Col xs={24} sm={2}>
-        <Text
-          strong
-          style={{
-            backgroundColor: '#d9f7be',
-            padding: '2px 4px',
-            borderRadius: '4px',
-            display: 'inline-block',
-          }}
-        >
-          DOB:
-        </Text>
-        <br />
-        <Text>{dob}</Text>
-      </Col>
-
-      {/* Additional Details */}
-      <Col xs={24} sm={1}>
-        <Text strong>Sex:</Text> <br />
-        <Text>{sex}</Text>
-      </Col>
-      <Col xs={24} sm={1}>
-        <Text strong>Race:</Text> <br />
-        <Text>{race}</Text>
-      </Col>
-      <Col xs={24} sm={2}>
-        <Text strong>Height:</Text> <br />
-        <Text>{height}</Text>
-      </Col>
-      <Col xs={24} sm={2}>
-        <Text strong>Weight:</Text> <br />
-        <Text>{weight}</Text>
-      </Col>
-
-      {/* Highlighted ID */}
-      <Col xs={24} sm={3}>
-        <Text
-          strong
-          style={{
-            backgroundColor: '#d9f7be',
-            padding: '2px 4px',
-            borderRadius: '4px',
-            display: 'inline-block',
-          }}
-        >
-          ID:
-        </Text>
-        <br />
-        <Text>{id}</Text>
-      </Col>
-
-      {/* Contact Details */}
-      <Col xs={24} sm={3}>
-        <Text strong>Phone Number:</Text> <br />
-        <Text>{phoneNumber}</Text>
-      </Col>
-      <Col xs={24} sm={4}>
-        <Text strong>Address:</Text> <br />
-        <Text>{address}</Text>
-      </Col>
-    </Row>
+      <Row justify="start" align="middle" style={{ marginBottom: "8px" }}>
+        <Space size="large">
+          <Checkbox></Checkbox>
+          <Col>
+            <Text>Case:</Text>
+            <Text>{" " + caseNumber}</Text>
+          </Col>
+          <Col>
+            <Text>Date:</Text>
+            <Text>{" " + date} </Text>
+          </Col>
+        </Space>
+      </Row>
+      <Row justify="start" align="middle" style={{ marginBottom: "16px",whiteSpace: 'nowrap', // Prevent wrapping
+          width: 'max-content', }}>
+        <Space size="large">
+           <Col>
+           <Text>First Name</Text><br />
+            <Text>{firstName}</Text>
+          </Col>
+          <Col>
+            <Text>Middle Name</Text><br />
+            <Text>{middleName}</Text>
+          </Col><Col>
+            <Text>Last Name</Text><br />
+            <Text>{lastName}</Text>
+          </Col>
+          <Col>
+           <Text>suffix</Text><br />
+            <Text>{suffix}</Text>
+          </Col>
+          <Col>
+            <Text>DOB</Text><br />
+            <Text>{dob}</Text>
+          </Col><Col>
+            <Text>Last Name</Text><br />
+            <Text>{lastName}</Text>
+          </Col>
+          <Col>
+           <Text>Sex</Text><br />
+            <Text>{sex}</Text>
+          </Col>
+          <Col>
+            <Text>Race</Text><br />
+            <Text>{race}</Text>
+          </Col><Col>
+            <Text>Height</Text><br />
+            <Text>{height}</Text>
+          </Col>
+          <Col>
+           <Text>ID</Text><br />
+            <Text>{id}</Text>
+          </Col>
+          <Col>
+            <Text>Phone No.</Text><br />
+            <Text>{phoneNumber}</Text>
+          </Col><Col>
+            <Text>Address</Text><br />
+            <Text>{address}</Text>
+          </Col>
+        </Space>
+      </Row>
+      </div>
+    </>
   );
 };
 

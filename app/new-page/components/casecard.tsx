@@ -48,7 +48,7 @@ const CaseCard: React.FC = () => {
           }}
         >
           {/* Header Row for Card 1 */}
-          <Row justify="space-between" align="middle" style={{ marginBottom: '16px' }}>
+          <Row justify="end" align="middle" style={{ marginBottom: '16px' }}>
             <Space size="large">
               <Col>
                 <Text strong>First:</Text> <br />
@@ -74,8 +74,7 @@ const CaseCard: React.FC = () => {
                 <Text strong>Cases:</Text> <br />
                 <Text>2</Text>
               </Col>
-            </Space>
-            <Space size="middle">
+
               <UserOutlined style={{ fontSize: '16px', cursor: 'pointer' }} />
               <Checkbox />
               <Dropdown overlay={menu} placement="bottomRight" arrow>
@@ -83,21 +82,13 @@ const CaseCard: React.FC = () => {
               </Dropdown>
             </Space>
           </Row>
-
-          {/* Content Section for Card 1 */}
-          <div
-            style={{
-              backgroundColor: '#f5f5f5',
-              borderRadius: '6px',
-              padding: '12px',
-            }}
-          >
             {/* Add content here */}
-          </div>
+            <CaseRow {...data}></CaseRow>
         </Card>
+        
       </Col>
 
-      {/* Card 2 */}
+
       <Col xs={24} sm={12}>
         <Card
           bordered
@@ -108,8 +99,8 @@ const CaseCard: React.FC = () => {
             marginBottom: '16px',
           }}
         >
-          {/* Header Row for Card 2 */}
-          <Row justify="space-between" align="middle" style={{ marginBottom: '16px' }}>
+          {/* Header Row for Card 1 */}
+          <Row justify="end" align="middle" style={{ marginBottom: '16px' }}>
             <Space size="large">
               <Col>
                 <Text strong>First:</Text> <br />
@@ -135,8 +126,7 @@ const CaseCard: React.FC = () => {
                 <Text strong>Cases:</Text> <br />
                 <Text>2</Text>
               </Col>
-            </Space>
-            <Space size="middle">
+
               <UserOutlined style={{ fontSize: '16px', cursor: 'pointer' }} />
               <Checkbox />
               <Dropdown overlay={menu} placement="bottomRight" arrow>
@@ -144,17 +134,54 @@ const CaseCard: React.FC = () => {
               </Dropdown>
             </Space>
           </Row>
+            {/* Add content here */}
+            <CaseRow {...data}></CaseRow>
+        </Card>
+        <Card
+          bordered
+          style={{
+            borderColor: '#d9d9d9',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+            marginBottom: '16px',
+          }}
+        >
+          {/* Header Row for Card 1 */}
+          <Row justify="end" align="middle" style={{ marginBottom: '16px' }}>
+            <Space size="large">
+              <Col>
+                <Text strong>First:</Text> <br />
+                <Text>{data.firstName}</Text>
+              </Col>
+              <Col>
+                <Text strong>Middle:</Text> <br />
+                <Text>{data.middleName}</Text>
+              </Col>
+              <Col>
+                <Text strong>Last:</Text> <br />
+                <Text>{data.lastName}</Text>
+              </Col>
+              <Col>
+                <Text strong>Suffix:</Text> <br />
+                <Text>{data.suffix || '---'}</Text>
+              </Col>
+              <Col>
+                <Text strong>DOB:</Text> <br />
+                <Text>{data.dob}</Text>
+              </Col>
+              <Col>
+                <Text strong>Cases:</Text> <br />
+                <Text>2</Text>
+              </Col>
 
-          {/* Content Section for Card 2 */}
-          <div
-            style={{
-              backgroundColor: '#f5f5f5',
-              borderRadius: '6px',
-              padding: '12px',
-            }}
-          >
-            {/* <CaseRow {...data} /> */}
-          </div>
+              <UserOutlined style={{ fontSize: '16px', cursor: 'pointer' }} />
+              <Checkbox />
+              <Dropdown overlay={menu} placement="bottomRight" arrow>
+                <a onClick={(e) => e.preventDefault()}>⋮</a>
+              </Dropdown>
+            </Space>
+          </Row>
+            <CaseRow {...data}></CaseRow>
         </Card>
       </Col>
     </Row>
