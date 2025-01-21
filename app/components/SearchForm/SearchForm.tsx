@@ -23,6 +23,7 @@ const SearchForm: React.FC = () => {
             label="Search Name"
             name="searchName"
             rules={[{ required: true, message: "Please input a name!" }]}
+            labelCol={{ style: { paddingBottom: '3px' } }}
             className={styles.formItem}
           >
             <Input />
@@ -33,6 +34,7 @@ const SearchForm: React.FC = () => {
             label="Type"
             name="type"
             rules={[{ required: true, message: "Please input a type!" }]}
+            labelCol={{ style: { paddingBottom: '3px' } }}
             className={styles.formItem}
           >
             <Input />
@@ -47,7 +49,7 @@ const SearchForm: React.FC = () => {
           </Form.Item>
         </Col>
       </Row>
-      <a href="#" className={styles.detailedSearch}>Description Search</a>
+      <a href="#" className={styles.detailedSearch}  style={{}}>Description Search</a>
     </Form>
   );
 };
